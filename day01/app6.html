@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue-learn day01</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <style>
+        html, body {
+            margin: 5px;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app6">
+    <p>{{ message }}</p>
+    <input v-model="message">
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app6",
+        data: {
+            message: "Hello Vue.js!"
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue-learn day01</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <style>
+        html, body {
+            margin: 5px;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app7">
+    <ol>
+        <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id">
+        </todo-item>
+    </ol>
+</div>
+
+<script>
+    Vue.component("todo-item", {
+        props: ['todo'],
+        template: "<li>{{ todo.text }}</li>"
+    });
+
+    var app = new Vue({
+        el: "#app7",
+        data: {
+            groceryList: [
+                {id: 0, text: "Java"},
+                {id: 1, text: "Python"},
+                {id: 2, text: "GoLang"},
+                {id: 3, text: "Vue.js"}
+            ]
+        }
+    })
+</script>
+</body>
+</html>
