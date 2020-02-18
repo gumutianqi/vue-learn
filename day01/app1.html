@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>vue-learn day01</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style>
         html, body {
             margin: 5px;
@@ -15,6 +15,7 @@
 
 <div id="app">
     {{ message }}
+    <div v-bind:id="message"></div>
 </div>
 
 <script>
